@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tes Kesehatan Mental</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="mentalHealthForm">
+            <h3>Tes Kesehatan Mental</h3>
+            <p>Jawablah pertanyaan-pertanyaan berikut ini dengan skala 1-5, di mana 1 = Tidak Pernah, 2 = Jarang, 3 = Kadang-kadang, 4 = Sering, 5 = Sangat Sering.</p>
+
+            <div class="question-group">
+                <label for="question1">1. Apakah Anda sering merasa cemas atau gelisah?</label>
+                <input type="number" id="question1" min="1" max="5" required>
+            </div>
+
+            <div class="question-group">
+                <label for="question2">2. Apakah Anda merasa sedih atau tertekan dalam beberapa minggu terakhir?</label>
+                <input type="number" id="question2" min="1" max="5" required>
+            </div>
+
+            <div class="question-group">
+                <label for="question3">3. Apakah Anda mengalami kesulitan tidur?</label>
+                <input type="number" id="question3" min="1" max="5" required>
+            </div>
+
+            <div class="question-group">
+                <label for="question4">4. Apakah Anda merasa sulit untuk berkonsentrasi atau fokus?</label>
+                <input type="number" id="question4" min="1" max="5" required>
+            </div>
+
+            <div class="question-group">
+                <label for="question5">5. Apakah Anda kehilangan minat pada aktivitas yang biasa Anda nikmati?</label>
+                <input type="number" id="question5" min="1" max="5" required>
+            </div>
+
+            <button type="submit" class="submit-button">Kirim</button>
+        </form>
+
+        <div id="mentalHealthResult" class="result-container hidden"></div>
+
+        <div id="buttonContainer" class="hidden">
+            <div class="button-container">
+                <button id="downloadButton" class="submit-button">Unduh PDF</button>
+                <button id="restartButton" class="submit-button">Input Ulang</button>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button id="mainMenuButton" class="submit-button">Menu Utama</button>
+        </div>
+
+        <footer>
+            Made by VDGANH<br>
+            <a href="https://www.instagram.com/mfadilanggara_22/" target="_blank">Instagram</a>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        // Menambahkan fungsionalitas untuk tombol Menu Utama
+        document.getElementById("mainMenuButton").onclick = function() {
+            window.location.href = "http://lifetrackvd.byethost7.com/?i=1"; // URL Menu Utama
+        };
+    </script>
+</body>
+</html>
